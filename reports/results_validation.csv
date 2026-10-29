@@ -1,0 +1,7 @@
+model,MAE,RMSE,MAE_log,Spearman
+Baseline: same som i fjor,15.823,27.891,0.338,0.958
+Baseline: snitt siste 3,18.077,33.959,0.363,0.956
+Ridge (log),39.787,205.283,0.612,0.906
+Random forest (log),13.929,23.83,0.316,0.962
+Gradient boosting (log),13.064,22.129,0.307,0.963
+Gradient boosting (delta),12.854,22.043,0.302,0.963

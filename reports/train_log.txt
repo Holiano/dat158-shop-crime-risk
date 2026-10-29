@@ -1,0 +1,39 @@
+Merka eksempel: 22997, stasjonar: 1199
+train 20657 | val 1172 | test 1168
+
+=== VALIDERING (2024/25) (n=1172) ===
+                              MAE     RMSE  MAE_log  Spearman
+model                                                        
+Baseline: same som i fjor  15.823   27.891    0.338     0.958
+Baseline: snitt siste 3    18.077   33.959    0.363     0.956
+Ridge (log)                39.787  205.283    0.612     0.906
+Random forest (log)        13.929   23.830    0.316     0.962
+Gradient boosting (log)    13.064   22.129    0.307     0.963
+Gradient boosting (delta)  12.854   22.043    0.302     0.963
+
+Beste modell på validering (lågast MAE): Gradient boosting (delta)
+
+=== TEST (2025/26) – berre ein gong (n=1168) ===
+                              MAE     RMSE  MAE_log  Spearman
+model                                                        
+Baseline: same som i fjor  13.496   22.825    0.344     0.951
+Baseline: snitt siste 3    19.343   34.536    0.407     0.948
+Ridge (log)                27.454  129.851    0.593     0.902
+Random forest (log)        11.127   17.896    0.315     0.954
+Gradient boosting (log)    10.306   15.959    0.304     0.955
+Gradient boosting (delta)  10.610   16.733    0.307     0.955
+
+Feature-viktigheit (auke i MAE_log når feature blir stokka):
+              feature  importance
+  business_crime_lag1      1.0436
+ burglary_nonres_lag1      0.0451
+ business_crime_trend      0.0148
+malicious_damage_lag1      0.0137
+    burglary_res_lag1      0.0097
+             latitude      0.0061
+  business_crime_lag2      0.0056
+            longitude      0.0042
+
+Dekning for 80 %-intervall på test: 74.7% (mål: 80 %)
+
+Lagra modell og prediksjonar for 2026/2027 i C:\Users\jabbu\Documents\Personlige prosjekt\ml-assignment-2\models

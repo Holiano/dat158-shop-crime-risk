@@ -1,0 +1,107 @@
+{
+  "best_model": "Gradient boosting (delta)",
+  "target": "burglary_nonres + robbery_nonres",
+  "features": [
+    "business_crime_lag1",
+    "burglary_nonres_lag1",
+    "robbery_nonres_lag1",
+    "shoplifting_lag1",
+    "burglary_res_lag1",
+    "aggr_robbery_lag1",
+    "common_robbery_lag1",
+    "malicious_damage_lag1",
+    "drug_crime_lag1",
+    "theft_from_vehicle_lag1",
+    "murder_lag1",
+    "business_crime_lag2",
+    "business_crime_lag3",
+    "business_crime_mean3",
+    "business_crime_trend",
+    "years_of_history",
+    "latitude",
+    "longitude"
+  ],
+  "predicts_season": "2026/2027",
+  "last_observed_season": "2025/2026",
+  "risk_cuts": {
+    "medium_from": 29.196444544323384,
+    "high_from": 78.67720898149618
+  },
+  "validation": {
+    "Baseline: same som i fjor": {
+      "MAE": 15.823,
+      "RMSE": 27.891,
+      "MAE_log": 0.338,
+      "Spearman": 0.958
+    },
+    "Baseline: snitt siste 3": {
+      "MAE": 18.077,
+      "RMSE": 33.959,
+      "MAE_log": 0.363,
+      "Spearman": 0.956
+    },
+    "Ridge (log)": {
+      "MAE": 39.787,
+      "RMSE": 205.283,
+      "MAE_log": 0.612,
+      "Spearman": 0.906
+    },
+    "Random forest (log)": {
+      "MAE": 13.929,
+      "RMSE": 23.83,
+      "MAE_log": 0.316,
+      "Spearman": 0.962
+    },
+    "Gradient boosting (log)": {
+      "MAE": 13.064,
+      "RMSE": 22.129,
+      "MAE_log": 0.307,
+      "Spearman": 0.963
+    },
+    "Gradient boosting (delta)": {
+      "MAE": 12.854,
+      "RMSE": 22.043,
+      "MAE_log": 0.302,
+      "Spearman": 0.963
+    }
+  },
+  "test": {
+    "Baseline: same som i fjor": {
+      "MAE": 13.496,
+      "RMSE": 22.825,
+      "MAE_log": 0.344,
+      "Spearman": 0.951
+    },
+    "Baseline: snitt siste 3": {
+      "MAE": 19.343,
+      "RMSE": 34.536,
+      "MAE_log": 0.407,
+      "Spearman": 0.948
+    },
+    "Ridge (log)": {
+      "MAE": 27.454,
+      "RMSE": 129.851,
+      "MAE_log": 0.593,
+      "Spearman": 0.902
+    },
+    "Random forest (log)": {
+      "MAE": 11.127,
+      "RMSE": 17.896,
+      "MAE_log": 0.315,
+      "Spearman": 0.954
+    },
+    "Gradient boosting (log)": {
+      "MAE": 10.306,
+      "RMSE": 15.959,
+      "MAE_log": 0.304,
+      "Spearman": 0.955
+    },
+    "Gradient boosting (delta)": {
+      "MAE": 10.61,
+      "RMSE": 16.733,
+      "MAE_log": 0.307,
+      "Spearman": 0.955
+    }
+  },
+  "interval_coverage_test_80pct": 0.747431506849315
+}
